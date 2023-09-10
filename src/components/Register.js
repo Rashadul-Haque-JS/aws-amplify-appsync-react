@@ -98,11 +98,11 @@ const Register = () => {
             required
           />
         </div>
-        {!isVerificationCodeSent && (
+        {isVerificationCodeSent && (
           <div className="mb-4">
             <label
               htmlFor="verificationCode"
-              className="block font-medium mb-2 text-blue-500"
+              className="block font-medium mb-2 text-red-500"
             >
               Verification Code
             </label>

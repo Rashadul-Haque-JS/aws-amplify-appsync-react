@@ -34,7 +34,7 @@ const IAMLoginForm = () => {
         Admin Login
       </h2>
         {temp && <p className="text-red-400 text-center py-4">{temp}</p>}
-      <div className="flex justify-center bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+      <div className="flex justify-center bg-teal-400 p-8 rounded-lg shadow-md w-full max-w-md">
         <form onSubmit={handleLogin}>
           <div className="my-3">
             <label>Access Key ID</label>
@@ -56,7 +56,7 @@ const IAMLoginForm = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white rounded-lg py-2 my-6 font-semibold hover:bg-blue-600 transition duration-300"
+            className="w-full bg-black text-white rounded-lg py-2 my-6 font-semibold hover:bg-blue-600 transition duration-300"
           >
             Log In
           </button>

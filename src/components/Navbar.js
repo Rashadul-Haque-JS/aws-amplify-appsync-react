@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <div className="h-16 bg-teal-400 text-black relative shadow-sm font-mono flex justify-between items-center">
       <div>
-        <h1 className="text-xl font-bold pl-8 text-white">DOKAN</h1>
+        <h1 className="text-2xl font-bold pl-8 text-white">DOKAN</h1>
       </div>
 
       <div className="flex justify-end items-center" role="navigation">
@@ -50,7 +50,7 @@ const Navbar = () => {
             className="px-4 cursor-pointer hover:bg-gray-200"
             key={navigation.name}
           >
-            <Link to={navigation.href}>{navigation.name}</Link>
+            <Link to={navigation.href} className="uppercase">{navigation.name}</Link>
           </div>
         ))}
       </div>

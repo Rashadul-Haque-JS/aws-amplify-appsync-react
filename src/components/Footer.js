@@ -9,7 +9,7 @@ const Footer = () => {
         <p>All rights reserved</p>
       </div>
       <div className="text-sm">
-        <Link to="/admin" className="text-blue-500 hover:text-blue-700">
+        <Link to="/admin" className="text-blue-300 hover:text-blue-400">
           Admin
         </Link>
       </div>
