@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="bg-gray-900 text-white py-4 px-6 flex justify-between items-center">
       <div className="text-sm">
-        <p>&copy; {new Date().getFullYear()} Your Company Name</p>
+        <p>&copy; {new Date().getFullYear()} Dokan</p>
         <p>All rights reserved</p>
       </div>
       <div className="text-sm">
