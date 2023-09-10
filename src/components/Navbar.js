@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Auth, Hub } from "aws-amplify"; 
+import { Auth, Hub } from "aws-amplify";
 
 const Navbar = () => {
   const [user, setUser] = useState(null);
@@ -33,29 +33,26 @@ const Navbar = () => {
 
   const navigations = [
     { name: "Dashboard", href: "/" },
-    { name: user ? "Profile" : "Login", href: user ? "/profile" : "/auth" }, 
+    { name: user ? "Profile" : "Login", href: user ? "/profile" : "/auth" },
   ];
 
-  // Function to handle user logout
-  const handleLogout = async () => {
-    try {
-      await Auth.signOut(); // Sign out the user
-    } catch (error) {
-      console.error("Error signing out:", error);
-    }
-  };
-
+ 
   return (
-    <div className="flex justify-end items-center h-16 bg-teal-400 text-black relative shadow-sm font-mono" role="navigation">
-      {navigations.map((navigation) => (
-        <div className="px-4 cursor-pointer hover:bg-gray-200" key={navigation.name}>
-          {navigation.name === "Profile" ? (
-            <span onClick={handleLogout}>{navigation.name}</span>
-          ) : (
+    <div className="h-16 bg-teal-400 text-black relative shadow-sm font-mono flex justify-between items-center">
+      <div>
+        <h1 className="text-xl font-bold pl-8 text-white">DOKAN</h1>
+      </div>
+
+      <div className="flex justify-end items-center" role="navigation">
+        {navigations.map((navigation) => (
+          <div
+            className="px-4 cursor-pointer hover:bg-gray-200"
+            key={navigation.name}
+          >
             <Link to={navigation.href}>{navigation.name}</Link>
-          )}
-        </div>
-      ))}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
