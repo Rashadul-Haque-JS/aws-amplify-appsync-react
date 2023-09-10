@@ -20,7 +20,7 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+    <div className="bg-white py-8 px-4 rounded-lg shadow-md w-full max-w-lg">
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="email" className="block text-gray-600 font-medium mb-2">

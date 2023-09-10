@@ -14,7 +14,7 @@ const ProductCard = ({ product }) => {
       </div>
       <p className="text-gray-600 mb-2">{product.description}</p>
       <div className='flex justify-center'>
-        <button className="bg-blue-500 text-white px-4 py-2 rounded-md mt-4 block">
+        <button className="bg-black text-white px-4 py-2 rounded-md mt-4 block">
           Add to Cart
         </button>
       </div>

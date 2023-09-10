@@ -32,7 +32,7 @@ const ProductDashboard = () => {
   }, [products]);
 
   return (
-    <div className="py-8 px-8 min-h-screen">
+    <div className="py-8 px-6 sm:px-4 md:px-4 min-h-screen">
       {loading && <p>Loading...</p>}
       {!loading && (
         <div>

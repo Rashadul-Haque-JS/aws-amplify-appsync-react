@@ -42,7 +42,7 @@ const Register = () => {
   };
 
   return (
-    <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+    <div className="bg-white py-8 px-4 rounded-lg shadow-md w-full max-w-md">
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label
