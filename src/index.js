@@ -4,7 +4,10 @@ import './index.css';
 import './configureAmplify'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
+library.add(faHeart);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
