@@ -1,0 +1,23 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-dokan-dev-231004-authRole",
+      "UnauthRoleArn": "arn:aws:iam::073942315774:role/amplify-dokan-dev-231004-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::073942315774:role/amplify-dokan-dev-231004-authRole",
+      "Region": "eu-north-1",
+      "DeploymentBucketName": "amplify-dokan-dev-231004-deployment",
+      "UnauthRoleName": "amplify-dokan-dev-231004-unauthRole",
+      "StackName": "amplify-dokan-dev-231004",
+      "StackId": "arn:aws:cloudformation:eu-north-1:073942315774:stack/amplify-dokan-dev-231004/3faab2b0-4f55-11ee-ba2e-06f6c935cf20",
+      "AmplifyAppId": "dkm2deaxl2r98"
+    },
+    "categories": {
+      "auth": {
+        "dokan0f3e8b8f": {}
+      },
+      "api": {
+        "dokan": {}
+      }
+    }
+  }
+}

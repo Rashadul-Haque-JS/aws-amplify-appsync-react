@@ -1,0 +1,12 @@
+{
+  "AppSyncApiName": "dokan",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authdokan0f3e8b8f",
+      "Outputs.UserPoolId"
+    ]
+  },
+  "AuthModeLastUpdated": "2023-09-09T23:53:45.476Z"
+}
