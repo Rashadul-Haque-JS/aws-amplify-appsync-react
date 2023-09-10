@@ -14,19 +14,19 @@
         "authConfig": {
           "additionalAuthenticationProviders": [
             {
-              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
-              "userPoolConfig": {
-                "userPoolId": "authdokan0f3e8b8f"
-              }
+              "apiKeyConfig": {
+                "apiKeyExpirationDate": "2024-03-08T14:14:46.346Z",
+                "apiKeyExpirationDays": 180,
+                "description": "Public Read Access Key"
+              },
+              "authenticationType": "API_KEY"
             }
           ],
           "defaultAuthentication": {
-            "apiKeyConfig": {
-              "apiKeyExpirationDate": "2024-03-09T23:53:21.476Z",
-              "apiKeyExpirationDays": 182,
-              "description": "public api key"
-            },
-            "authenticationType": "API_KEY"
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authdokan0f3e8b8f"
+            }
           }
         }
       },
@@ -60,6 +60,13 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "storage": {
+    "dokanAssets1": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
     }
   }
 }

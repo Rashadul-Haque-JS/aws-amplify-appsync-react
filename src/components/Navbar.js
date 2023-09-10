@@ -34,6 +34,7 @@ const Navbar = () => {
   const navigations = [
     { name: "Dashboard", href: "/" },
     { name: user ? "Profile" : "Login", href: user ? "/profile" : "/auth" },
+    
   ];
 
  

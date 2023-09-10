@@ -4,7 +4,9 @@ import { Auth } from "aws-amplify";
 
 const Profile = () => {
   const [user, setUser] = useState(null);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
   const navigate = useNavigate();
+
   useEffect(() => {
     async function fetchUser() {
       try {
@@ -28,26 +30,29 @@ const Profile = () => {
   };
 
   const handleDeleteAccount = async () => {
-    if (
-      window.confirm(
-        "Are you sure you want to delete your account? This action cannot be undone."
-      )
-    ) {
-      try {
-        await Auth.currentAuthenticatedUser().then((user) => {
-          return Auth.deleteUser({ user });
-        });
-        setUser(null); // Clear user data after deletion
-      } catch (error) {
-        console.error("Error deleting account:", error);
-      }
+    setShowDeleteModal(true);
+  };
+
+  const confirmDeleteAccount = async () => {
+    try {
+      await Auth.currentAuthenticatedUser().then((user) => {
+        return Auth.deleteUser({ user });
+      });
+      setUser(null); // Clear user data after deletion
+      setShowDeleteModal(false);
+    } catch (error) {
+      console.error("Error deleting account:", error);
     }
   };
 
+  const closeModal = () => {
+    setShowDeleteModal(false);
+  };
+
   return (
-    <div className="w-full">
+    <div className="w-full min-h-screen relative">
       {user ? (
-        <div className="text-center">
+        <div className="text-center" style={{opacity:showDeleteModal?.5:1}}>
           <h2 className="text-2xl font-semibold p-8">Profile</h2>
           <div className="flex flex-wrap justify-evenly items-center mt-8 gap-8">
             <div className="flex justify-center items-center">
@@ -82,8 +87,36 @@ const Profile = () => {
       ) : (
         <p className="text-center py-10">Loading user data...</p>
       )}
+
+      {/* Delete Account Modal */}
+      {showDeleteModal && (
+        <div className="modal fixed inset-1/3 sm:inset-4 md:inset-6 shadow-lg p-8 bg-gray-400 text-white rounded">
+          <div className="modal-content">
+            <h3 className="text-xl font-semibold text-black py-5">Confirm Deletion</h3>
+            <p>
+              Are you sure you want to delete your account? This action cannot
+              be undone.
+            </p>
+            <div className="modal-buttons py-5">
+              <button
+                onClick={confirmDeleteAccount}
+                className="bg-red-500 text-white rounded-lg py-2 px-4 font-semibold hover:bg-red-600 transition duration-300"
+              >
+                Confirm
+              </button>
+              <button
+                onClick={closeModal}
+                className="bg-gray-500 text-white rounded-lg py-2 px-4 ml-4 font-semibold hover:bg-gray-600 transition duration-300"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
 export default Profile;
+

@@ -1,0 +1,16 @@
+{
+  "resourceName": "dokanAssets1",
+  "policyUUID": "841027d0",
+  "bucketName": "dokand77628df64ac4b018e81f6b61b32ccc9",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
