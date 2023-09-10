@@ -1,0 +1,28 @@
+type User @model
+  @auth(
+    rules: [
+      { allow: owner, operations: [create, read, update, delete] },
+      { allow: groups, groups: ["admin"], operations: [create, read, update, delete] }
+    ]
+  ) {
+  id: ID!
+  name: String!
+  email: String!
+  password: String!
+}
+
+type Product @model
+  @auth(
+    rules: [
+      { allow: groups, groups: ["admin"], operations: [create, read, update, delete] },
+      { allow: public, operations: [read] },
+      { allow: private, operations: [read] }
+    ]
+  ) {
+  id: ID!
+  title: String!
+  description: String!
+  image: String!
+  price: Float!
+}
+

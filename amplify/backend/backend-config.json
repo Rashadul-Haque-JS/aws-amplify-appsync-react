@@ -1,32 +1,30 @@
 {
   "api": {
-    "dokan": {
+    "ecommerceapp": {
       "dependsOn": [
         {
           "attributes": [
             "UserPoolId"
           ],
           "category": "auth",
-          "resourceName": "dokan0f3e8b8f"
+          "resourceName": "ecommerceapp5b870c77"
         }
       ],
       "output": {
         "authConfig": {
           "additionalAuthenticationProviders": [
             {
-              "apiKeyConfig": {
-                "apiKeyExpirationDate": "2024-03-08T14:14:46.346Z",
-                "apiKeyExpirationDays": 180,
-                "description": "Public Read Access Key"
-              },
-              "authenticationType": "API_KEY"
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authecommerceapp5b870c77"
+              }
             }
           ],
           "defaultAuthentication": {
-            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
-            "userPoolConfig": {
-              "userPoolId": "authdokan0f3e8b8f"
-            }
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
           }
         }
       },
@@ -35,7 +33,7 @@
     }
   },
   "auth": {
-    "dokan0f3e8b8f": {
+    "ecommerceapp5b870c77": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -62,9 +60,32 @@
       "service": "Cognito"
     }
   },
+  "function": {
+    "S3Triggere407e71b": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "hosting": {
+    "S3AndCloudFront": {
+      "providerPlugin": "awscloudformation",
+      "service": "S3AndCloudFront"
+    }
+  },
   "storage": {
-    "dokanAssets1": {
-      "dependsOn": [],
+    "dokansAssets": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "LambdaExecutionRole"
+          ],
+          "category": "function",
+          "resourceName": "S3Triggere407e71b"
+        }
+      ],
       "providerPlugin": "awscloudformation",
       "service": "S3"
     }

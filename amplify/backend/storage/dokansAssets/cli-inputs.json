@@ -1,0 +1,16 @@
+{
+  "resourceName": "dokansAssets",
+  "policyUUID": "36c968f4",
+  "bucketName": "ecommerceapp9ca8ecba7509469f90b6747d8733cfa6",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "S3Triggere407e71b",
+  "groupAccess": {}
+}

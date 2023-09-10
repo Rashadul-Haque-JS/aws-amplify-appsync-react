@@ -1,25 +1,31 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-dokan-dev-231004-authRole",
-      "UnauthRoleArn": "arn:aws:iam::073942315774:role/amplify-dokan-dev-231004-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::073942315774:role/amplify-dokan-dev-231004-authRole",
+      "AuthRoleName": "amplify-ecommerceapp-dev-183120-authRole",
+      "UnauthRoleArn": "arn:aws:iam::073942315774:role/amplify-ecommerceapp-dev-183120-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::073942315774:role/amplify-ecommerceapp-dev-183120-authRole",
       "Region": "eu-north-1",
-      "DeploymentBucketName": "amplify-dokan-dev-231004-deployment",
-      "UnauthRoleName": "amplify-dokan-dev-231004-unauthRole",
-      "StackName": "amplify-dokan-dev-231004",
-      "StackId": "arn:aws:cloudformation:eu-north-1:073942315774:stack/amplify-dokan-dev-231004/3faab2b0-4f55-11ee-ba2e-06f6c935cf20",
-      "AmplifyAppId": "dkm2deaxl2r98"
+      "DeploymentBucketName": "amplify-ecommerceapp-dev-183120-deployment",
+      "UnauthRoleName": "amplify-ecommerceapp-dev-183120-unauthRole",
+      "StackName": "amplify-ecommerceapp-dev-183120",
+      "StackId": "arn:aws:cloudformation:eu-north-1:073942315774:stack/amplify-ecommerceapp-dev-183120/79f638c0-4ff7-11ee-9d1c-0e77196019cc",
+      "AmplifyAppId": "d18d5ikychyvnc"
     },
     "categories": {
       "auth": {
-        "dokan0f3e8b8f": {}
+        "ecommerceapp5b870c77": {}
       },
-      "api": {
-        "dokan": {}
+      "function": {
+        "S3Triggere407e71b": {
+          "deploymentBucketName": "amplify-ecommerceapp-dev-183120-deployment",
+          "s3Key": "amplify-builds/S3Triggere407e71b-67356332474655473265-build.zip"
+        }
       },
       "storage": {
-        "dokanAssets1": {}
+        "dokansAssets": {}
+      },
+      "api": {
+        "ecommerceapp": {}
       }
     }
   }

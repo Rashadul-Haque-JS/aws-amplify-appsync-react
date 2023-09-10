@@ -1,13 +1,13 @@
 export type AmplifyDependentResourcesAttributes = {
   "api": {
-    "dokan": {
+    "ecommerceapp": {
       "GraphQLAPIEndpointOutput": "string",
       "GraphQLAPIIdOutput": "string",
       "GraphQLAPIKeyOutput": "string"
     }
   },
   "auth": {
-    "dokan0f3e8b8f": {
+    "ecommerceapp5b870c77": {
       "AppClientID": "string",
       "AppClientIDWeb": "string",
       "IdentityPoolId": "string",
@@ -17,8 +17,29 @@ export type AmplifyDependentResourcesAttributes = {
       "UserPoolName": "string"
     }
   },
+  "function": {
+    "S3Triggere407e71b": {
+      "Arn": "string",
+      "LambdaExecutionRole": "string",
+      "LambdaExecutionRoleArn": "string",
+      "Name": "string",
+      "Region": "string"
+    }
+  },
+  "hosting": {
+    "S3AndCloudFront": {
+      "CloudFrontDistributionID": "string",
+      "CloudFrontDomainName": "string",
+      "CloudFrontOriginAccessIdentity": "string",
+      "CloudFrontSecureURL": "string",
+      "HostingBucketName": "string",
+      "Region": "string",
+      "S3BucketSecureURL": "string",
+      "WebsiteURL": "string"
+    }
+  },
   "storage": {
-    "dokanAssets1": {
+    "dokansAssets": {
       "BucketName": "string",
       "Region": "string"
     }
