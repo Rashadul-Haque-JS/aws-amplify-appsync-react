@@ -67,10 +67,23 @@
       "service": "Lambda"
     }
   },
-  "hosting": {
-    "S3AndCloudFront": {
-      "providerPlugin": "awscloudformation",
-      "service": "S3AndCloudFront"
+  "hosting": {},
+  "parameters": {
+    "AMPLIFY_function_S3Triggere407e71b_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "S3Triggere407e71b"
+        }
+      ]
+    },
+    "AMPLIFY_function_S3Triggere407e71b_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "S3Triggere407e71b"
+        }
+      ]
     }
   },
   "storage": {

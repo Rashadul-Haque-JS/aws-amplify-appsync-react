@@ -98,11 +98,11 @@ const Register = () => {
             required
           />
         </div>
-        {isVerificationCodeSent && (
+        {!isVerificationCodeSent && (
           <div className="mb-4">
             <label
               htmlFor="verificationCode"
-              className="block text-gray-600 font-medium mb-2"
+              className="block font-medium mb-2 text-blue-500"
             >
               Verification Code
             </label>
@@ -115,13 +115,14 @@ const Register = () => {
               className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
               placeholder="Enter verification code"
               required
+              
             />
           </div>
         )}
         {error && <p className="text-red-500 mb-4">{error}</p>}
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white rounded-lg py-2 font-semibold hover:bg-blue-600 transition duration-300"
+          className="w-full bg-black text-white rounded-lg py-2 font-semibold hover:bg-blue-600 transition duration-300"
         >
           {isVerificationCodeSent ? "Confirm Registration" : "Register"}
         </button>

@@ -26,9 +26,6 @@
       },
       "api": {
         "ecommerceapp": {}
-      },
-      "hosting": {
-        "S3AndCloudFront": {}
       }
     }
   }
