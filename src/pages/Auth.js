@@ -33,7 +33,7 @@ const HomePage = () => {
             {isLogin ? "Don’t have an account?" : "Already have an account?"}
             <button
               onClick={() => setIsLogin(!isLogin)}
-              className="font-semibold text-blue-500 hover:text-blue-600 focus:text-blue-600 focus:outline-none"
+              className="font-semibold text-blue-500 hover:text-blue-600 focus:text-blue-600 focus:outline-none px-2"
             >
               {isLogin ? "Register" : "Login"}
             </button>
